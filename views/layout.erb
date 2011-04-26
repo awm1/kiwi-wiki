@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= @pagetitle %> | Kiwi</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <link rel="stylesheet" href="/stylesheets/kiwi.css">
+  </head>
+  <body>
+    <div class="container">
+    <section id="header">
+      <a href="/"><h1>Kiwi</h1></a>
+    </section>
+    <hr>
+      <%= yield %>
+    </div><!-- /container -->
+  </body>
+</html>

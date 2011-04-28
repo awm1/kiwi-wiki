@@ -5,7 +5,7 @@ require 'bluecloth'
 
 # --- Storage ----------------------------------------------------------------
 PAGES_DIRECTORY = File.expand_path('../pages', __FILE__)
-FileUtils.mkdir_p PAGES_DIRECTORY
+#FileUtils.mkdir_p PAGES_DIRECTORY
 
 # --- Helpers ----------------------------------------------------------------
 helpers do

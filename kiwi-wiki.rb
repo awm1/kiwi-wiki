@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'fileutils'
 require 'bluecloth'
-require 'activerecord'
+require 'active_record'
 
 # --- Storage ----------------------------------------------------------------
 PAGES_DIRECTORY = File.expand_path('../pages', __FILE__)

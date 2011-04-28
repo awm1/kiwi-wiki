@@ -2,10 +2,14 @@ require 'rubygems'
 require 'sinatra'
 require 'fileutils'
 require 'bluecloth'
+require 'activerecord'
 
 # --- Storage ----------------------------------------------------------------
 PAGES_DIRECTORY = File.expand_path('../pages', __FILE__)
 #FileUtils.mkdir_p PAGES_DIRECTORY
+
+dbconfig = YAML.load(File.read('config/database.yml'))
+ActiveRecord::Base.establish_connection dbconfig['production']
 
 # --- Helpers ----------------------------------------------------------------
 helpers do

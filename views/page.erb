@@ -1,22 +1,17 @@
-<h2><%= @title %>
-
+<div class="category_list"><h4>Kategorie: <%= @title  %></h4></div>
+<br>
+<h2><%= @page_name  %></h2>
+<hr>
+<br>
+<div class="text_container"><%= @text %></div>
+<br>
 <hr>
 
-<%= @body %>
-
-<h2>Historie</h2>
-
-<ul>
-<% @revisions.each do |revision| %>
-<li>
-  <% if revision == params[:timestamp] %>
-    <strong>
-    <%= Time.at(revision.to_i).strftime('%d/%m/%Y %H:%M') %>
-    </strong>
-  <% else %>
-    <a href="/pages/<%= @title %>/revisions/<%= revision %>">
-      <%= Time.at(revision.to_i).strftime('%d/%m/%Y %H:%M') %>
-    </a>
-  <% end %>
-<% end %>
-</ul>
+<a href="/pages/<%= @page.id %>/rename" class="button">Přejmenovat stránku</a>
+&bull;
+<a href="/pages/<%= @page.id %>/edit" class="button">Upravit stránku</a>
+&bull;
+<a href="/pages/<%= @page.id %>/history" class="button">Zobrazit historii úprav</a>
+&bull;
+<a href="/pages/<%= @page.id %>/discussion" class="button">Zobrazit diskuzi</a>
+<br>

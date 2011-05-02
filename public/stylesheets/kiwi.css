@@ -2,45 +2,92 @@ html
   { height: 100%; }
 
 body
-  { background: #5f3b02;
+  { background: #17a1bf;
     padding: 0;
     height: 100%; }
 
 .container
-  { color: green !important;
+  { color: black;
     background: white;
-    margin: 2em auto 2em auto;
+    margin: 1em auto 1em auto;
     padding: 2em 2em;
-    min-height: 40em;
-    -webkit-border-radius: 5px;
+    min-height: 42em;
+    /*-webkit-border-radius: 5px;
     -moz-border-radius:    5px;
-    border-radius: 5px; }
+    border-radius: 5px; */}
 
 .container *
-  { color: #3C270C; }
+  { color: black; }
+
+.container p
+  { margin: 0 2ex; }
 
 .container #header h1
-  { color: #3C270C;
-    background: url('/images/kiwi-logo.png') 0 0 no-repeat;
-    padding: 30px 0 0.2em 125px;
-    margin: 0 !important;
-    height: 80px; }
+  { color: #d45300;
+    font-size: 500%;
+    background: url('/images/kiwi-logo.png') 20px 0 no-repeat;
+    padding: 50px 0 0.2em 480px;
+    margin: 0 30px !important;
+    height: 100px; }
 
 .container hr
-  { background-color: #CFC6B8; }
+  { background-color: #CFC6B8;
+    margin: 2em 0; }
 
-.container ul
-  { padding-left: 1.4em; }
+.container h2
+  { padding-left: 1em;
+    color: #073900; }
+
+.container h2 *
+  { padding-left: 1em; }
+
+.container h3
+  { padding-left: 2em;
+    color: #073900; }
+
+.container h3 *
+  { padding-left: 2em; }
+
+.container h4
+  { padding-left: 3em;
+    color: #073900; }
+
+.container h4 *
+  { padding-left: 3em; }
+
+.container h5
+  { padding-left: 4em;
+    color: #073900; }
+
+.container h4 *
+  { padding-left: 4em; }
+
+.container h6
+  { padding-left: 5em;
+    color: #073900; }
+
+.container h6 *
+  { padding-left: 5em; }
+
+.container .text_container *
+  { padding: 0; }
+
+.container .text_container a
+  { color: #17009c; }
+
+.container .category_list h4 a
+  { padding: 0; }
 
 a.button,
 input.button
   { font-size: 11px;
-    color: #376100;
-    background: #B1E261;
+    color: #0c00a7;
+    background: #69cf2b;
     border: none;
     font-weight: bold;
     text-decoration: none;
     padding: 0.5em 1em;
+    margin: 0 3em;
     -webkit-border-radius: 10px;
     -moz-border-radius:    10px;
     border-radius: 10px;

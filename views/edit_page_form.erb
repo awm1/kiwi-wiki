@@ -1,0 +1,17 @@
+<% if (@error != nil && @error != '') %>
+<h3><%= @error %></h3>
+<% end %>
+
+<form action="/edit_page" method="post">
+  <input type="hidden" name="id" value="<%= @id %>">
+  <h3>Editace stránky: <%= @page_name %></h3>
+  <br>
+
+  <p><label>Text:</label></p>
+  <p><textarea name="text"><%= @old_text %></textarea></p>
+
+  <p><label>Komentář k editaci:</label></p>
+  <p><textarea name="comment"></textarea></p>
+
+  <p><input type="submit" value="Uložit" class="button"></p>
+</form>

@@ -1,0 +1,12 @@
+<% if (@error != nil && @error != '') %>
+<h3><%= @error %></h3>
+<% end %>
+
+<form action="/rename_page" method="post">
+  <input type="hidden" name="id" value="<%= @id %>">
+  <p><label>Nový název stránky</label></p>
+
+  <p><input type="text" name="page_name" value="<%= @current_name %>"></p>
+
+  <p><input type="submit" value="Uložit" class="button"></p>
+</form>

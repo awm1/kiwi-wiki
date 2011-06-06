@@ -1,0 +1,40 @@
+<h2>Kategorie: <%= @title  %></h2>
+
+<a href="/categories/<%= @parent.id %>/rename" class="button">Přejmenovat kategorii</a>
+<br>
+<br>
+
+<hr>
+
+<h3>Subkategorie</h3>
+
+<% if (@categories.count > 0) %>
+<ul>
+<% @categories.each do |category| %>
+  <li><a href="/categories/<%= category.id %>"><%= category.name %></a>
+<% end %>
+</ul>
+<% else %>
+  <h4>Žádná subkategorie není k dispozici.</h4>
+<% end %>
+
+<br>
+<br>
+
+<a href="/categories/<%= @parent.id %>/new" class="button">Vytvořit novou subkategorii</a>
+<hr>
+
+<h3>Stránky</h3>
+<% if (@pages.count > 0) %>
+<ul>
+<% @pages.each do |page| %>
+  <li><a href="/pages/<%= page.id %>"><%= page.name %></a>
+<% end %>
+</ul>
+<% else %>
+  <h4>Žádná stránka není k dispozici.</h4>
+<% end %>
+
+<br>
+<br>
+<a href="/pages/<%= @parent.id %>/new" class="button">Vytvořit novou stránku</a>

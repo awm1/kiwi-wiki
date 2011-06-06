@@ -1,0 +1,29 @@
+<div class="category_list"><h4>Kategorie: <%= @title  %></h4></div>
+<br>
+<h2><%= @page_name  %></h2>
+<br>
+
+<hr>
+
+<h3>Historie úprav:</h3>
+
+<ul>
+<% @revisions.each do |revision| %>
+<li>
+<a href="/pages/<%= @id %>/revision/<%= revision.id %>"><%= Time.parse(revision.create_time.to_s).strftime("%Y-%m-%d %H:%M:%S").to_s %>
+</a>
+<% if (revision.comment != nil && revision.comment != '') %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/pages/<%= @id %>/revision/<%= revision.id %>/comment"> Zobrazit komentář</a>
+<% end %>
+<% if (revision.id == @current_revision) %>
+<%= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; − [AKTUÁLNÍ]" %>
+<% end %>
+</li>
+<% end  %>
+</ul>
+<hr>
+
+<% if (@revisions != nil && @revisions.count > 1) %>
+<a href="/pages/<%= @id %>/history/compare" class="button">Porovnat dvě revize</a>
+<% end  %>

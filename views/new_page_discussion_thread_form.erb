@@ -1,0 +1,12 @@
+<% if (@error != nil && @error != '') %>
+<h3><%= @error %></h3>
+<% end %>
+
+<form action="/add_new_thread_to_page_discussion" method="post">
+  <input type="hidden" name="page_id" value="<%= @page_id %>">
+
+  <p><label>Komentář:</label></p>
+  <p><textarea name="comment"></textarea></p>
+
+  <p><input type="submit" value="Uložit" class="button"></p>
+</form>

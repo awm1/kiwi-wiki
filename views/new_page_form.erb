@@ -1,0 +1,17 @@
+<% if (@error != nil && @error != '') %>
+<h3><%= @error %></h3>
+<% end %>
+
+<form action="/pages" method="post">
+  <input type="hidden" name="parent_id" value="<%= @parent_id %>">
+  <p><label>Název stránky</label></p>
+  <p><input type="text" name="page_name" value=""></p>
+
+  <p><label>Text stránky:</label></p>
+  <p><textarea name="text"></textarea></p>
+
+  <p><label>Komentář k editaci:</label></p>
+  <p><textarea name="comment"></textarea></p>
+
+  <p><input type="submit" value="Uložit" class="button"></p>
+</form>

@@ -1,0 +1,15 @@
+<div class="category_list"><h4>Kategorie: <%= @title  %></h4></div>
+<br>
+<h2><%= @page_name  %></h2>
+<br>
+
+<hr>
+
+<form action="" method="post">
+  <h3>Původní soubory</h3>
+  <textarea name="first_revision" readonly><%= @first_revision %></textarea>
+  <textarea name="second_revision" readonly><%= @second_revision %></textarea>
+  <hr>
+  <h3>Rozdíly - výstup programu diff (možný vstup pro patch):</h3>
+  <textarea name="diff" readonly><%= @diff %></textarea>
+</form>

@@ -1,0 +1,12 @@
+<% if (@error != nil && @error != '') %>
+<h3><%= @error %></h3>
+<% end %>
+
+<form action="/categories" method="post">
+  <input type="hidden" name="parent_id" value="<%= @parent_id %>">
+  <p><label>Název kategorie</label></p>
+
+  <p><input type="text" name="category_name" value=""></p>
+
+  <p><input type="submit" value="Uložit" class="button"></p>
+</form>

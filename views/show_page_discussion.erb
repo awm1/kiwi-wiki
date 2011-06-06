@@ -1,0 +1,22 @@
+<div class="category_list"><h4>Kategorie: <%= @title  %></h4></div>
+<br>
+<h2><%= @page_name  %></h2>
+<hr>
+
+<h3>Diskuze:</h3>
+
+<% if (@threads != nil && @threads.count > 0) %>
+<ul>
+<% @threads.each do |thread| %>
+<li>
+<%= thread.text %>
+<hr>
+</li>
+<% end  %>
+</ul>
+<% else %>
+  <h4>Žádný komentář není k dispozici.</h4>
+<% end %>
+
+<hr>
+<a href="/pages/<%= @id %>/discussion/new_thread" class="button">Přidat nový komentář</a>

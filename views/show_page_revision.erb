@@ -1,0 +1,19 @@
+<div class="category_list"><h4>Kategorie: <%= @title  %></h4></div>
+<br>
+<h2><%= @page_name  %></h2>
+
+<% if (@is_current == false) %>
+<form action="/pages/revision" method="post">
+  <input type="hidden" name="id" value="<%= @id %>">
+  <input type="hidden" name="revision" value="<%= @revision %>">
+
+  <p><input type="submit" value="Označit jako aktuální" class="button"></p>
+</form>
+<% end %>
+
+<br>
+<br>
+
+<hr>
+
+<%= @text %>
